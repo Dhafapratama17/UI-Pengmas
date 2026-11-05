@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { LinkButton } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Book, BookCategory } from "@/types/db";
@@ -24,14 +25,24 @@ export function BookCard({
 
   return (
     <article className="flex flex-col overflow-hidden rounded-card border border-surface-soft bg-white shadow-card transition-shadow hover:shadow-drawer">
-      <div
-        className={`flex h-36 items-center justify-center ${coverClass}`}
-        aria-hidden
-      >
-        <span className="truncate px-4 text-sm font-extrabold uppercase tracking-wide">
-          {category?.name ?? "Koleksi"}
-        </span>
-      </div>
+      {book.coverUrl ? (
+        <Image
+          src={book.coverUrl}
+          alt={`Sampul buku ${book.title}`}
+          width={352}
+          height={512}
+          className="h-36 w-full object-cover"
+        />
+      ) : (
+        <div
+          className={`flex h-36 items-center justify-center ${coverClass}`}
+          aria-hidden
+        >
+          <span className="truncate px-4 text-sm font-extrabold uppercase tracking-wide">
+            {category?.name ?? "Koleksi"}
+          </span>
+        </div>
+      )}
       <div className="flex flex-1 flex-col gap-1.5 p-4">
         <h3 className="line-clamp-2 font-bold leading-snug text-ink">
           {book.title}

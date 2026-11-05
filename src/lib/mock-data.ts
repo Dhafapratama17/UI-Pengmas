@@ -104,7 +104,7 @@ export const mockBooks: Book[] = [
     categoryId: "cat-03",
     synopsis:
       "Kisah perjuangan sepuluh anak Belitung meraih pendidikan di sekolah Muhammadiyah penuh keterbatasan.",
-    coverUrl: null,
+    coverUrl: "/images/books/buk-001.jpg",
     totalCopies: 3,
     availableCopies: 2,
     status: "published",
@@ -121,7 +121,7 @@ export const mockBooks: Book[] = [
     categoryId: "cat-03",
     synopsis:
       "Petualangan Raib, Ali, dan Seli menjelajahi dunia paralel yang penuh misteri.",
-    coverUrl: null,
+    coverUrl: "/images/books/buk-002.jpg",
     totalCopies: 3,
     availableCopies: 0,
     status: "published",
@@ -172,7 +172,7 @@ export const mockBooks: Book[] = [
     categoryId: "cat-03",
     synopsis:
       "Novel dua generasi perempuan Halimunda berlatar sejarah Indonesia abad ke-20.",
-    coverUrl: null,
+    coverUrl: "/images/books/buk-005.jpg",
     totalCopies: 2,
     availableCopies: 1,
     status: "published",
@@ -274,7 +274,7 @@ export const mockBooks: Book[] = [
     categoryId: "cat-03",
     synopsis:
       "Klasik satir kolonial yang memperkenalkan isu keadilan sosial pada era Hindia Belanda.",
-    coverUrl: null,
+    coverUrl: "/images/books/buk-011.jpg",
     totalCopies: 2,
     availableCopies: 2,
     status: "published",

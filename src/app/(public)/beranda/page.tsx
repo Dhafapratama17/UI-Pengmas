@@ -84,9 +84,21 @@ export default async function BerandaPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {popular.items.map((book) => (
             <Card key={book.id} padded={false} className="overflow-hidden">
-              <div className="flex h-32 items-center justify-center bg-surface-soft/60 text-4xl font-extrabold text-primary-deep/70">
-                {book.title.charAt(0)}
-              </div>
+              {book.coverUrl ? (
+                <Image
+                  src={book.coverUrl}
+                  alt={`Sampul buku ${book.title}`}
+                  width={352}
+                  height={512}
+                  className="h-32 w-full object-cover"
+                />
+              ) : (
+                <div
+                  className="flex h-32 items-center justify-center bg-surface-soft/60 text-4xl font-extrabold text-primary-deep/70"
+                >
+                  {book.title.charAt(0)}
+                </div>
+              )}
               <div className="space-y-1.5 p-4">
                 <p className="truncate font-bold text-ink">{book.title}</p>
                 <p className="truncate text-sm text-ink-soft">{book.author}</p>
